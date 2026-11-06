@@ -1,670 +1,469 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mago Tatto Studio | Arte na pele, alma no processo</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: {
-                            light: '#F3E5AB',
-                            DEFAULT: '#C5A059',
-                            dark: '#9A7B38'
-                        },
-                        darkBg: '#0A0A0A',
-                        darkCard: '#141414',
-                        darkBorder: '#262626'
-                    },
-                    fontFamily: {
-                        cinzel: ['Cinzel', 'serif'],
-                        sans: ['Montserrat', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .text-gold-gradient {
-            background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 30%, #B38728 70%, #FBF5B7 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Mago Tattoo Studio — arte autoral, precisão e biossegurança em São Luís, Maranhão. Conheça o portfólio e solicite seu orçamento.">
+  <title>Mago Tattoo Studio | Arte na pele</title>
 
-        .bg-gold-gradient {
-            background: linear-gradient(135deg, #C5A059 0%, #E6CA85 50%, #9A7B38 100%);
-        }
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-        .bg-gold-gradient:hover {
-            background: linear-gradient(135deg, #D4AF37 0%, #F5DC96 50%, #B8860B 100%);
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: { light: '#F3E5AB', DEFAULT: '#C5A059', dark: '#9A7B38' },
+            darkBg: '#0A0A0A',
+            darkCard: '#141414'
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Montserrat', 'sans-serif']
+          }
         }
+      }
+    };
+  </script>
 
-        /* Efeito de Botão Flutuante Global */
-        .btn-floating-effect {
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
-        }
-        .btn-floating-effect:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 20px -3px rgba(197, 160, 89, 0.4), 0 4px 6px -2px rgba(197, 160, 89, 0.2);
-        }
-
-        .gold-streak-top-left {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 250px;
-            height: 250px;
-            background: radial-gradient(circle at top left, rgba(197, 160, 89, 0.25) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .gold-streak-bottom-right {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle at bottom right, rgba(197, 160, 89, 0.25) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .bg-noise {
-            background-color: #0A0A0A;
-            background-image: radial-gradient(rgba(197, 160, 89, 0.08) 1px, transparent 0);
-            background-size: 32px 32px;
-        }
-
-        .glass-nav {
-            background: rgba(10, 10, 10, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0a0a0a;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #262626;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #C5A059;
-        }
-
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 15px rgba(197, 160, 89, 0.3); }
-            50% { box-shadow: 0 0 25px rgba(197, 160, 89, 0.6); }
-        }
-        .gold-glow {
-            animation: pulse-glow 3s infinite;
-        }
-    </style>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      background-color: #0a0a0a;
+      background-image: radial-gradient(rgba(197,160,89,.07) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .text-gold-gradient {
+      background: linear-gradient(135deg,#BF953F 0%,#FCF6BA 30%,#B38728 70%,#FBF5B7 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .gold-button {
+      background: linear-gradient(135deg,#C5A059 0%,#E6CA85 50%,#9A7B38 100%);
+      color: #080808; transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+    }
+    .gold-button:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(197,160,89,.25); filter: brightness(1.08); }
+    .glass-nav { background: rgba(10,10,10,.9); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+    .gold-line { height: 1px; width: 64px; background: #C5A059; margin: 18px auto; }
+    .gallery-item[hidden] { display: none !important; }
+    .gallery-tab[aria-pressed="true"] { background: #C5A059; color: #080808; border-color: #C5A059; font-weight: 700; }
+    .gallery-tab:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 2px solid #F3E5AB; outline-offset: 4px;
+    }
+    .gold-glow { animation: glow 3s ease-in-out infinite; }
+    @keyframes glow { 0%,100% { box-shadow: 0 0 12px rgba(197,160,89,.2); } 50% { box-shadow: 0 0 24px rgba(197,160,89,.5); } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
 </head>
-<body class="bg-darkBg text-gray-200 font-sans antialiased bg-noise min-h-screen selection:bg-gold selection:text-black">
 
-    <!-- ================= NAVBAR ================= -->
-    <nav class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-gold/20 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                
-                <!-- Logo Ajustada e Centralizada na Navbar -->
-                <a href="#" class="flex items-center justify-center group mx-auto md:mx-0">
-                    <img src="logo_mago_tatto_transparente.png" 
-                         alt="Mago Tatto Studio Logo" 
-                         class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_0_8px_rgba(197,160,89,0.3)]"
-                         onerror="this.onerror=null; this.src='https://placehold.co/200x200/0A0A0A/C5A059?text=MAGO+TATTO'">
-                </a>
+<body class="bg-darkBg text-gray-200 font-sans antialiased selection:bg-gold selection:text-black">
+  <!-- Navegação -->
+  <header class="fixed inset-x-0 top-0 z-50 glass-nav border-b border-gold/20">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Navegação principal">
+      <div class="h-20 flex items-center justify-between">
+        <a href="#inicio" class="flex items-center" aria-label="Mago Tattoo Studio — início">
+          <img src="logo_mago_tatto_transparente.png" alt="Logo Mago Tattoo Studio" class="h-12 w-auto object-contain drop-shadow-[0_0_8px_rgba(197,160,89,.3)]"
+               onerror="this.onerror=null;this.src='https://placehold.co/200x100/0A0A0A/C5A059?text=MAGO+TATTOO'">
+        </a>
 
-                <div class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-[0.2em] uppercase">
-                    <a href="#inicio" class="text-gold hover:text-white transition-colors py-2 border-b-2 border-gold">Início</a>
-                    <a href="#tatuador" class="text-gray-300 hover:text-gold transition-colors py-2">O Tatuador</a>
-                    <a href="#portfolio" class="text-gray-300 hover:text-gold transition-colors py-2">Portfólio</a>
-                    <a href="#biosseguranca" class="text-gray-300 hover:text-gold transition-colors py-2">Biossegurança</a>
-                    <a href="#agendamento" class="text-gray-300 hover:text-gold transition-colors py-2">Orçamento</a>
-                </div>
-
-                <div class="hidden md:flex items-center">
-                    <a href="https://wa.me/5598999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20or%C3%A7amento." target="_blank" 
-                       class="px-5 py-2.5 bg-gold-gradient text-black font-semibold text-xs tracking-wider uppercase rounded-sm shadow-md btn-floating-effect flex items-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-sm"></i>
-                        <span>Agendar no Whats</span>
-                    </a>
-                </div>
-
-                <div class="md:hidden flex items-center absolute right-4">
-                    <button id="mobile-menu-btn" class="text-gold focus:outline-none p-2" aria-label="Abrir Menu">
-                        <i class="fa-solid fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
+        <div class="hidden lg:flex items-center gap-7 text-[11px] font-semibold tracking-[.18em] uppercase">
+          <a href="#inicio" class="text-gold hover:text-white transition-colors">Início</a>
+          <a href="#tatuador" class="hover:text-gold transition-colors">O tatuador</a>
+          <a href="#portfolio" class="hover:text-gold transition-colors">Portfólio</a>
+          <a href="#biosseguranca" class="hover:text-gold transition-colors">Biossegurança</a>
+          <a href="#agendamento" class="hover:text-gold transition-colors">Orçamento</a>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-darkCard/95 border-b border-gold/20 px-4 pt-2 pb-6 space-y-4">
-            <a href="#inicio" class="mobile-link block text-sm tracking-widest uppercase py-2 hover:text-gold border-b border-gray-800">Início</a>
-            <a href="#tatuador" class="mobile-link block text-sm tracking-widest uppercase py-2 hover:text-gold border-b border-gray-800">O Tatuador</a>
-            <a href="#portfolio" class="mobile-link block text-sm tracking-widest uppercase py-2 hover:text-gold border-b border-gray-800">Portfólio</a>
-            <a href="#biosseguranca" class="mobile-link block text-sm tracking-widest uppercase py-2 hover:text-gold border-b border-gray-800">Biossegurança</a>
-            <a href="#agendamento" class="mobile-link block text-sm tracking-widest uppercase py-2 hover:text-gold border-b border-gray-800">Orçamento</a>
-            <a href="https://wa.me/5598999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20or%C3%A7amento." target="_blank" 
-               class="w-full mt-4 px-5 py-3 bg-gold-gradient text-black text-center font-bold text-xs tracking-wider uppercase rounded-sm btn-floating-effect flex items-center justify-center gap-2">
-                <i class="fa-brands fa-whatsapp text-base"></i>
-                <span>Chamar no WhatsApp</span>
-            </a>
+        <div class="hidden md:flex items-center gap-3">
+          <a href="https://www.instagram.com/magotattooink01/" target="_blank" rel="noopener noreferrer"
+             aria-label="Instagram do Mago Tattoo Studio" class="w-10 h-10 border border-gold/40 text-gold hover:bg-gold hover:text-black rounded-sm flex items-center justify-center transition-colors">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://wa.me/5598987558077?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20or%C3%A7amento."
+             target="_blank" rel="noopener noreferrer" class="gold-button px-5 py-3 rounded-sm text-[11px] font-bold tracking-wider uppercase flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Agendar no WhatsApp
+          </a>
         </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-gold p-2" type="button"
+                aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
+          <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden pb-5 space-y-1 border-t border-gold/10">
+        <a href="#inicio" class="mobile-link block py-3 text-xs tracking-widest uppercase">Início</a>
+        <a href="#tatuador" class="mobile-link block py-3 text-xs tracking-widest uppercase">O tatuador</a>
+        <a href="#portfolio" class="mobile-link block py-3 text-xs tracking-widest uppercase">Portfólio</a>
+        <a href="#biosseguranca" class="mobile-link block py-3 text-xs tracking-widest uppercase">Biossegurança</a>
+        <a href="#agendamento" class="mobile-link block py-3 text-xs tracking-widest uppercase">Orçamento</a>
+        <div class="flex gap-3 pt-3">
+          <a href="https://www.instagram.com/magotattooink01/" target="_blank" rel="noopener noreferrer" class="flex-1 border border-gold/40 text-gold py-3 text-center text-xs uppercase tracking-wider">
+            <i class="fa-brands fa-instagram mr-2" aria-hidden="true"></i>Instagram
+          </a>
+          <a href="https://wa.me/5598987558077" target="_blank" rel="noopener noreferrer" class="flex-1 gold-button py-3 text-center text-xs uppercase tracking-wider font-bold">
+            <i class="fa-brands fa-whatsapp mr-2" aria-hidden="true"></i>WhatsApp
+          </a>
+        </div>
+      </div>
     </nav>
+  </header>
 
-    <!-- ================= HERO SECTION ================= -->
-    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 overflow-hidden">
-        
-        <div class="gold-streak-top-left"></div>
-        <div class="gold-streak-bottom-right"></div>
-
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?q=80&w=1920&auto=format&fit=crop" 
-                 alt="Tattoo Atmosphere" 
-                 class="w-full h-full object-cover object-center opacity-20 filter grayscale contrast-125">
-            <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-darkBg/90 to-darkBg/60"></div>
+  <main>
+    <!-- Apresentação -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-28 pb-20 px-4 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?q=80&w=1920&auto=format&fit=crop"
+             alt="" aria-hidden="true" class="w-full h-full object-cover opacity-20 grayscale contrast-125">
+        <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-darkBg/90 to-darkBg/60"></div>
+      </div>
+      <div class="absolute top-0 left-0 w-64 h-64 bg-[radial-gradient(circle_at_top_left,rgba(197,160,89,.18),transparent_70%)] pointer-events-none"></div>
+      <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 border border-gold/40 rounded-full bg-black/60 mb-8">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-[10px] sm:text-xs tracking-[.22em] text-gold uppercase">Agenda aberta — consulte disponibilidade</span>
         </div>
-
-        <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
-            
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-gold/40 rounded-full bg-black/60 backdrop-blur-md mb-8">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span class="text-xs tracking-[0.25em] text-gold uppercase font-medium">Agenda Aberta da Semana</span>
-            </div>
-
-            <!-- Logo Principal Absolutamente Centralizada com Elegância -->
-            <div class="w-full flex justify-center items-center mb-6">
-                <div class="relative p-2 flex justify-center items-center">
-                    <div class="absolute inset-0 bg-gold/5 blur-xl rounded-full"></div>
-                    <img src="logo_mago_tatto_transparente.png" 
-                         alt="Mago Tatto Studio Marca Oficial" 
-                         class="relative w-full max-w-[260px] sm:max-w-[340px] md:max-w-[380px] h-auto object-contain mx-auto drop-shadow-[0_0_25px_rgba(197,160,89,0.5)] animate-pulse"
-                         style="animation-duration: 4s;"
-                         onerror="this.onerror=null; this.src='https://placehold.co/400x300/0A0A0A/C5A059?text=MAGO+TATTO+STUDIO'">
-                </div>
-            </div>
-
-            <div class="flex items-center justify-center gap-3 my-2 w-full">
-                <span class="text-gold text-xs">✦</span>
-                <p class="font-cinzel italic text-base sm:text-xl text-gray-200 tracking-wider">
-                    "Arte na pele, alma no processo."
-                </p>
-                <span class="text-gold text-xs">✦</span>
-            </div>
-
-            <p class="text-gray-400 text-sm sm:text-base max-w-xl my-6 font-light leading-relaxed">
-                Transformando suas ideias e histórias em artes exclusivas e autorais com o mais alto padrão de precisão, estética e biossegurança.
-            </p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-2 w-full sm:w-auto">
-                <a href="#agendamento" 
-                   class="w-full sm:w-auto px-8 py-4 bg-gold-gradient text-black font-bold text-xs sm:text-sm tracking-[0.2em] uppercase rounded-sm shadow-lg btn-floating-effect flex items-center justify-center gap-3">
-                    <i class="fa-brands fa-whatsapp text-lg"></i>
-                    <span>Garanta Seu Horário</span>
-                </a>
-                <a href="#portfolio" 
-                   class="w-full sm:w-auto px-8 py-4 border border-gold/50 text-gold hover:bg-gold/10 font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase rounded-sm btn-floating-effect transition-all flex items-center justify-center gap-2">
-                    <span>Ver Portfólio</span>
-                    <i class="fa-solid fa-arrow-down text-xs"></i>
-                </a>
-            </div>
-
-            <div class="mt-12 text-[11px] tracking-[0.35em] text-gold/80 uppercase flex items-center justify-center gap-3 font-medium">
-                <span>TATTOO</span> ✦ <span>ARTE</span> ✦ <span>EXPRESSÃO</span>
-            </div>
+        <img src="logo_mago_tatto_transparente.png" alt="Mago Tattoo Studio"
+             class="w-full max-w-[270px] sm:max-w-[350px] md:max-w-[390px] h-auto object-contain mb-7 drop-shadow-[0_0_25px_rgba(197,160,89,.35)]"
+             onerror="this.onerror=null;this.src='https://placehold.co/400x300/0A0A0A/C5A059?text=MAGO+TATTOO+STUDIO'">
+        <div class="flex items-center justify-center gap-3">
+          <span class="text-gold">✦</span>
+          <p class="font-cinzel italic text-base sm:text-xl tracking-wider">“Arte na pele.”</p>
+          <span class="text-gold">✦</span>
         </div>
+        <p class="text-gray-400 text-sm sm:text-base max-w-2xl my-7 font-light leading-relaxed">
+          Transformando ideias e histórias em artes exclusivas e autorais, com atenção aos detalhes, estética e compromisso com a biossegurança.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          <a href="#agendamento" class="gold-button px-8 py-4 text-xs font-bold tracking-[.18em] uppercase rounded-sm flex items-center justify-center gap-3">
+            <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> Solicitar orçamento
+          </a>
+          <a href="#portfolio" class="px-8 py-4 border border-gold/50 text-gold hover:bg-gold/10 text-xs font-semibold tracking-[.18em] uppercase rounded-sm transition-colors flex items-center justify-center gap-2">
+            Ver portfólio <i class="fa-solid fa-arrow-down text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+        <a href="https://www.instagram.com/magotattooink01/" target="_blank" rel="noopener noreferrer"
+           class="mt-8 text-gray-400 hover:text-gold transition-colors text-xs tracking-wider">
+          <i class="fa-brands fa-instagram mr-2 text-base" aria-hidden="true"></i>@magotattooink01
+        </a>
+      </div>
     </section>
 
-    <!-- ================= SEÇÃO O TATUADOR ================= -->
-    <section id="tatuador" class="py-24 px-4 sm:px-6 max-w-7xl mx-auto border-t border-gold/10 relative">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            <div class="lg:col-span-5 relative group">
-                <div class="relative z-10 rounded-sm overflow-hidden border border-gold/40 bg-darkCard p-2 shadow-2xl">
-                    <div class="w-full h-[380px] sm:h-[480px] lg:h-[500px] overflow-hidden rounded-xs">
-                        <img src="filipefeitosa.png" 
-                             alt="Filipe Feitosa - Mago Tattoo Studio" 
-                             class="w-full h-full object-cover object-[center_20%] filter grayscale contrast-110 group-hover:grayscale-0 transition-all duration-700">
-                    </div>
-                    
-                    <div class="absolute bottom-6 left-6 right-6 bg-black/85 backdrop-blur-md border border-gold/30 p-4 text-center">
-                        <span class="text-xs uppercase tracking-[0.25em] text-gold font-bold block">Filipe Feitosa</span>
-                        <span class="text-[11px] text-gray-400 font-light">Mago Tattoo • Especialista em Projetos Autorais</span>
-                    </div>
-                </div>
-                <div class="absolute -top-4 -left-4 w-full h-full border border-gold/20 -z-0 hidden sm:block"></div>
-                <div class="absolute -bottom-4 -right-4 w-full h-full border border-gold/20 -z-0 hidden sm:block"></div>
+    <!-- Sobre o tatuador -->
+    <section id="tatuador" class="py-24 px-4 sm:px-6 max-w-7xl mx-auto border-t border-gold/10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 relative">
+          <div class="relative z-10 border border-gold/40 bg-darkCard p-2 shadow-2xl">
+            <div class="h-[390px] sm:h-[480px] lg:h-[510px] overflow-hidden">
+              <img src="filipefeitosa.png" alt="Filipe Feitosa, tatuador do Mago Tattoo Studio"
+                   class="w-full h-full object-cover object-[center_20%] grayscale hover:grayscale-0 transition-all duration-700">
             </div>
-
-            <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
-                <div class="flex items-center gap-2 text-gold text-xs tracking-[0.3em] uppercase">
-                    <i class="fa-solid fa-pen-nib"></i>
-                    <span>Apresentação Pessoal</span>
-                </div>
-
-                <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white tracking-wide">
-                    Mente Criativa Por Trás dos Traços
-                </h2>
-
-                <p class="text-gray-300 leading-relaxed font-light text-sm sm:text-base">
-                    Bem-vindo ao espaço onde a arte encontra a permanência. Meu objetivo como artista tatuador vai muito além de aplicar pigmento na pele: é traduzir a sua visão em um projeto autêntico, exclusivo e que harmonize perfeitamente com a anatomia do seu corpo.
-                </p>
-
-                <p class="text-gray-400 leading-relaxed font-light text-sm">
-                    Com anos de dedicação ao aperfeiçoamento de técnicas como Blackwork, Realismo e traços finos, cada sessão é planejada para oferecer uma experiência confortável, segura e memorável em um ambiente que respira arte do início ao fim.
-                </p>
-
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-gold/20">
-                    <div class="p-3 bg-darkCard border border-gold/10 rounded-sm">
-                        <span class="font-cinzel text-2xl font-bold text-gold block">100%</span>
-                        <span class="text-xs text-gray-400 uppercase tracking-wider">Arte Exclusiva</span>
-                    </div>
-                    <div class="p-3 bg-darkCard border border-gold/10 rounded-sm">
-                        <span class="font-cinzel text-2xl font-bold text-gold block">Anvisa</span>
-                        <span class="text-xs text-gray-400 uppercase tracking-wider">Biossegurança</span>
-                    </div>
-                    <div class="p-3 bg-darkCard border border-gold/10 rounded-sm col-span-2 sm:col-span-1">
-                        <span class="font-cinzel text-2xl font-bold text-gold block">Premium</span>
-                        <span class="text-xs text-gray-400 uppercase tracking-wider">Atendimento</span>
-                    </div>
-                </div>
-
-                <div class="pt-2">
-                    <a href="https://wa.me/5598999999999?text=Ol%C3%A1!%20Gostaria%20de%20trocar%20uma%20ideia%20sobre%20uma%20tattoo%20autoral." target="_blank" 
-                       class="inline-flex items-center gap-3 text-gold hover:text-white transition-colors text-xs uppercase tracking-[0.2em] font-semibold group">
-                        <span>Conversar diretamente com Filipe</span>
-                        <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
-
+            <div class="absolute bottom-6 left-6 right-6 bg-black/90 border border-gold/30 p-4 text-center">
+              <span class="text-xs uppercase tracking-[.25em] text-gold font-bold block">Filipe Feitosa</span>
+              <span class="text-[11px] text-gray-400">Mago Tattoo • Projetos autorais</span>
             </div>
-
+          </div>
+          <div class="absolute -bottom-4 -right-4 w-full h-full border border-gold/20 -z-0 hidden sm:block"></div>
         </div>
+
+        <div class="lg:col-span-7 space-y-6">
+          <div class="flex items-center gap-2 text-gold text-xs tracking-[.3em] uppercase">
+            <i class="fa-solid fa-pen-nib" aria-hidden="true"></i> Apresentação
+          </div>
+          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white">A arte por trás de cada traço</h2>
+          <p class="text-gray-300 leading-relaxed font-light text-sm sm:text-base">
+            Bem-vindo ao espaço onde a arte encontra a permanência. Meu objetivo como artista tatuador vai além de aplicar pigmento na pele: é transformar sua ideia em um projeto autêntico, pensado para você e para a anatomia do seu corpo.
+          </p>
+          <p class="text-gray-400 leading-relaxed font-light text-sm">
+            Cada trabalho começa com uma conversa para entender sua referência, suas expectativas e o resultado que deseja alcançar. O cuidado com o desenho, a execução e a experiência durante a sessão faz parte de todo o processo.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-gold/20">
+            <div class="p-4 bg-darkCard border border-gold/10"><span class="font-cinzel text-xl font-bold text-gold block">Autoral</span><span class="text-[10px] text-gray-400 uppercase tracking-wider">Projetos personalizados</span></div>
+            <div class="p-4 bg-darkCard border border-gold/10"><span class="font-cinzel text-xl font-bold text-gold block">Cuidado</span><span class="text-[10px] text-gray-400 uppercase tracking-wider">Atenção aos detalhes</span></div>
+            <div class="p-4 bg-darkCard border border-gold/10 col-span-2 sm:col-span-1"><span class="font-cinzel text-xl font-bold text-gold block">Qualidade</span><span class="text-[10px] text-gray-400 uppercase tracking-wider">Compromisso em cada sessão</span></div>
+          </div>
+          <div class="flex flex-wrap gap-5 pt-2">
+            <a href="https://wa.me/5598987558077?text=Ol%C3%A1%2C%20Filipe!%20Gostaria%20de%20conversar%20sobre%20uma%20tattoo." target="_blank" rel="noopener noreferrer" class="text-gold hover:text-white text-xs uppercase tracking-wider font-semibold transition-colors">
+              Conversar com Filipe <i class="fa-solid fa-arrow-right ml-2" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/magotattooink01/" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-white text-xs uppercase tracking-wider font-semibold transition-colors">
+              Ver Instagram <i class="fa-brands fa-instagram ml-2" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ================= PORTFÓLIO & GALERIA COM BORDAS DOURADAS ================= -->
-    <section id="portfolio" class="py-24 px-4 sm:px-6 bg-darkCard/40 border-t border-gold/10 relative">
-        <div class="max-w-7xl mx-auto">
-            
-            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
-                <span class="text-xs uppercase tracking-[0.3em] text-gold">Galeria de Trabalhos</span>
-                <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white uppercase tracking-wider">
-                    Artes & Trabalhos Recentes
-                </h2>
-                <div class="w-16 h-[1px] bg-gold mx-auto my-4"></div>
-                <p class="text-gray-400 text-sm font-light">
-                    Confira abaixo os trabalhos reais executados no estúdio. Cada tatuagem é desenvolvida sob medida e com acabamento de alta precisão.
-                </p>
-            </div>
-
-            <!-- Category Filter Tabs -->
-            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12">
-                <button onclick="filterGallery('todos', event)" class="gallery-tab active px-5 py-2 text-xs uppercase tracking-widest border border-gold bg-gold text-black font-semibold rounded-sm btn-floating-effect transition-all">Todos</button>
-                <button onclick="filterGallery('realismo', event)" class="gallery-tab px-5 py-2 text-xs uppercase tracking-widest border border-gold/30 text-gray-300 hover:border-gold hover:text-gold rounded-sm btn-floating-effect transition-all">Realismo / Sombreado</button>
-                <button onclick="filterGallery('autorais', event)" class="gallery-tab px-5 py-2 text-xs uppercase tracking-widest border border-gold/30 text-gray-300 hover:border-gold hover:text-gold rounded-sm btn-floating-effect transition-all">Projetos Exclusivos</button>
-            </div>
-
-            <!-- Portfolio Grid Cards com Borda Dourada e Botões Flutuantes -->
-            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                <!-- 1. Onça com Flores -->
-                <div class="gallery-item autorais group relative bg-darkBg border-2 border-gold/60 hover:border-gold rounded-sm overflow-hidden shadow-[0_0_15px_rgba(197,160,89,0.15)] transition-all">
-                    <div class="h-80 overflow-hidden relative">
-                        <img src="onça.jpeg" alt="Tattoo Onça com Flores" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-5 flex flex-col justify-end">
-                        <span class="text-[10px] text-gold uppercase tracking-[0.2em] font-semibold mb-1">Projeto Autoral</span>
-                        <h3 class="font-cinzel text-lg text-white font-bold mb-3">Onça & Floral na Coluna</h3>
-                        <button onclick="openQuotaModal('Projeto Autoral - Onça e Floral')" class="w-full py-2.5 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 font-medium text-xs tracking-wider uppercase transition-all rounded-xs btn-floating-effect">
-                            Quero uma tattoo assim
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 2. Palhaço -->
-                <div class="gallery-item realismo group relative bg-darkBg border-2 border-gold/60 hover:border-gold rounded-sm overflow-hidden shadow-[0_0_15px_rgba(197,160,89,0.15)] transition-all">
-                    <div class="h-80 overflow-hidden relative">
-                        <img src="palhaço.jpeg" alt="Tattoo Palhaço" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-5 flex flex-col justify-end">
-                        <span class="text-[10px] text-gold uppercase tracking-[0.2em] font-semibold mb-1">Realismo Sombreado</span>
-                        <h3 class="font-cinzel text-lg text-white font-bold mb-3">Palhaço Estilo Chicano</h3>
-                        <button onclick="openQuotaModal('Realismo - Palhaço Chicano')" class="w-full py-2.5 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 font-medium text-xs tracking-wider uppercase transition-all rounded-xs btn-floating-effect">
-                            Quero uma tattoo assim
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 3. Guerreira e Tigre -->
-                <div class="gallery-item realismo group relative bg-darkBg border-2 border-gold/60 hover:border-gold rounded-sm overflow-hidden shadow-[0_0_15px_rgba(197,160,89,0.15)] transition-all">
-                    <div class="h-80 overflow-hidden relative">
-                        <img src="tattoo1.jpeg" alt="Tattoo Guerreira com Tigre" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-5 flex flex-col justify-end">
-                        <span class="text-[10px] text-gold uppercase tracking-[0.2em] font-semibold mb-1">Realismo / Fechamento</span>
-                        <h3 class="font-cinzel text-lg text-white font-bold mb-3">Guerreira Indígena e Tigre</h3>
-                        <button onclick="openQuotaModal('Realismo - Guerreira e Tigre')" class="w-full py-2.5 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 font-medium text-xs tracking-wider uppercase transition-all rounded-xs btn-floating-effect">
-                            Quero uma tattoo assim
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 4. Medusa -->
-                <div class="gallery-item autorais group relative bg-darkBg border-2 border-gold/60 hover:border-gold rounded-sm overflow-hidden shadow-[0_0_15px_rgba(197,160,89,0.15)] transition-all">
-                    <div class="h-80 overflow-hidden relative">
-                        <img src="medusa.jpeg" alt="Tattoo Medusa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-5 flex flex-col justify-end">
-                        <span class="text-[10px] text-gold uppercase tracking-[0.2em] font-semibold mb-1">Projeto Autoral</span>
-                        <h3 class="font-cinzel text-lg text-white font-bold mb-3">Medusa com Serpentes</h3>
-                        <button onclick="openQuotaModal('Projeto Autoral - Medusa')" class="w-full py-2.5 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 font-medium text-xs tracking-wider uppercase transition-all rounded-xs btn-floating-effect">
-                            Quero uma tattoo assim
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 5. Fênix -->
-                <div class="gallery-item autorais group relative bg-darkBg border-2 border-gold/60 hover:border-gold rounded-sm overflow-hidden shadow-[0_0_15px_rgba(197,160,89,0.15)] transition-all">
-                    <div class="h-80 overflow-hidden relative">
-                        <img src="fenix.jpeg" alt="Tattoo Fênix" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-5 flex flex-col justify-end">
-                        <span class="text-[10px] text-gold uppercase tracking-[0.2em] font-semibold mb-1">Projeto Autoral</span>
-                        <h3 class="font-cinzel text-lg text-white font-bold mb-3">Fênix & Floral nas Costas</h3>
-                        <button onclick="openQuotaModal('Projeto Autoral - Fênix')" class="w-full py-2.5 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 font-medium text-xs tracking-wider uppercase transition-all rounded-xs btn-floating-effect">
-                            Quero uma tattoo assim
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 6. Borboletas -->
-                <div class="gallery-item autorais group relative bg-darkBg border-2 border-gold/60 hover:border-gold rounded-sm overflow-hidden shadow-[0_0_15px_rgba(197,160,89,0.15)] transition-all">
-                    <div class="h-80 overflow-hidden relative">
-                        <img src="borboletas.jpeg" alt="Tattoo Borboletas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-5 flex flex-col justify-end">
-                        <span class="text-[10px] text-gold uppercase tracking-[0.2em] font-semibold mb-1">Fine Line / Autoral</span>
-                        <h3 class="font-cinzel text-lg text-white font-bold mb-3">Borboletas & Flores na Coluna</h3>
-                        <button onclick="openQuotaModal('Projeto Autoral - Borboletas')" class="w-full py-2.5 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 font-medium text-xs tracking-wider uppercase transition-all rounded-xs btn-floating-effect">
-                            Quero uma tattoo assim
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 7. Flores com Frase -->
-                <div class="gallery-item autorais group relative bg-darkBg border-2 border-gold/60 hover:border-gold rounded-sm overflow-hidden shadow-[0_0_15px_rgba(197,160,89,0.15)] transition-all">
-                    <div class="h-80 overflow-hidden relative">
-                        <img src="flores.jpeg" alt="Tattoo Flores com Frase" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-5 flex flex-col justify-end">
-                        <span class="text-[10px] text-gold uppercase tracking-[0.2em] font-semibold mb-1">Fine Line / Escrita</span>
-                        <h3 class="font-cinzel text-lg text-white font-bold mb-3">Frase Delicada & Floral</h3>
-                        <button onclick="openQuotaModal('Fine Line - Frase Floral')" class="w-full py-2.5 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 font-medium text-xs tracking-wider uppercase transition-all rounded-xs btn-floating-effect">
-                            Quero uma tattoo assim
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 8. Índia -->
-                <div class="gallery-item realismo group relative bg-darkBg border-2 border-gold/60 hover:border-gold rounded-sm overflow-hidden shadow-[0_0_15px_rgba(197,160,89,0.15)] transition-all">
-                    <div class="h-80 overflow-hidden relative">
-                        <img src="india.jpeg" alt="Tattoo Índia" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-5 flex flex-col justify-end">
-                        <span class="text-[10px] text-gold uppercase tracking-[0.2em] font-semibold mb-1">Realismo / Sombreado</span>
-                        <h3 class="font-cinzel text-lg text-white font-bold mb-3">Índia com Adornos</h3>
-                        <button onclick="openQuotaModal('Realismo - Índia')" class="w-full py-2.5 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 font-medium text-xs tracking-wider uppercase transition-all rounded-xs btn-floating-effect">
-                            Quero uma tattoo assim
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 9. Máscara -->
-                <div class="gallery-item realismo group relative bg-darkBg border-2 border-gold/60 hover:border-gold rounded-sm overflow-hidden shadow-[0_0_15px_rgba(197,160,89,0.15)] transition-all">
-                    <div class="h-80 overflow-hidden relative">
-                        <img src="mascara.jpeg" alt="Tattoo Máscara Hannya" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-5 flex flex-col justify-end">
-                        <span class="text-[10px] text-gold uppercase tracking-[0.2em] font-semibold mb-1">Blackwork / Oriental</span>
-                        <h3 class="font-cinzel text-lg text-white font-bold mb-3">Máscara Oriental Blackwork</h3>
-                        <button onclick="openQuotaModal('Blackwork - Máscara Oriental')" class="w-full py-2.5 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 font-medium text-xs tracking-wider uppercase transition-all rounded-xs btn-floating-effect">
-                            Quero uma tattoo assim
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-
+    <!-- Portfólio -->
+    <section id="portfolio" class="py-24 px-4 sm:px-6 bg-darkCard/40 border-y border-gold/10">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs uppercase tracking-[.3em] text-gold">Galeria de trabalhos</span>
+          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white uppercase tracking-wider mt-3">Artes & trabalhos</h2>
+          <div class="gold-line"></div>
+          <p class="text-gray-400 text-sm font-light">Conheça alguns trabalhos do estúdio. Cada projeto pode ser adaptado e desenvolvido de acordo com sua ideia.</p>
         </div>
+
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-10" role="group" aria-label="Filtrar portfólio">
+          <button type="button" class="gallery-tab px-5 py-2 text-xs uppercase tracking-widest border border-gold rounded-sm transition-colors" data-filter="todos" aria-pressed="true">Todos</button>
+          <button type="button" class="gallery-tab px-5 py-2 text-xs uppercase tracking-widest border border-gold/30 text-gray-300 rounded-sm transition-colors" data-filter="realismo" aria-pressed="false">Realismo / Sombreado</button>
+          <button type="button" class="gallery-tab px-5 py-2 text-xs uppercase tracking-widest border border-gold/30 text-gray-300 rounded-sm transition-colors" data-filter="autorais" aria-pressed="false">Projetos exclusivos</button>
+        </div>
+
+        <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <article class="gallery-item autorais group relative bg-darkBg border border-gold/50 rounded-sm overflow-hidden shadow-lg">
+            <div class="h-80 overflow-hidden"><img src="onça.jpeg" alt="Tatuagem de onça com flores na coluna" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black via-black/90 to-transparent"><span class="text-[10px] text-gold uppercase tracking-widest">Projeto autoral</span><h3 class="font-cinzel text-lg text-white font-bold my-2">Onça & floral na coluna</h3><button type="button" data-art="Projeto autoral — Onça e floral" class="quote-art w-full py-3 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 text-xs tracking-wider uppercase transition-colors">Quero uma tattoo assim</button></div>
+          </article>
+          <article class="gallery-item realismo group relative bg-darkBg border border-gold/50 rounded-sm overflow-hidden shadow-lg">
+            <div class="h-80 overflow-hidden"><img src="palhaço.jpeg" alt="Tatuagem de palhaço estilo Chicano" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black via-black/90 to-transparent"><span class="text-[10px] text-gold uppercase tracking-widest">Realismo sombreado</span><h3 class="font-cinzel text-lg text-white font-bold my-2">Palhaço estilo Chicano</h3><button type="button" data-art="Realismo — Palhaço Chicano" class="quote-art w-full py-3 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 text-xs tracking-wider uppercase transition-colors">Quero uma tattoo assim</button></div>
+          </article>
+          <article class="gallery-item realismo group relative bg-darkBg border border-gold/50 rounded-sm overflow-hidden shadow-lg">
+            <div class="h-80 overflow-hidden"><img src="tattoo1.jpeg" alt="Tatuagem de guerreira indígena com tigre" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black via-black/90 to-transparent"><span class="text-[10px] text-gold uppercase tracking-widest">Realismo / fechamento</span><h3 class="font-cinzel text-lg text-white font-bold my-2">Guerreira e tigre</h3><button type="button" data-art="Realismo — Guerreira e tigre" class="quote-art w-full py-3 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 text-xs tracking-wider uppercase transition-colors">Quero uma tattoo assim</button></div>
+          </article>
+          <article class="gallery-item autorais group relative bg-darkBg border border-gold/50 rounded-sm overflow-hidden shadow-lg">
+            <div class="h-80 overflow-hidden"><img src="medusa.jpeg" alt="Tatuagem autoral de Medusa com serpentes" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black via-black/90 to-transparent"><span class="text-[10px] text-gold uppercase tracking-widest">Projeto autoral</span><h3 class="font-cinzel text-lg text-white font-bold my-2">Medusa com serpentes</h3><button type="button" data-art="Projeto autoral — Medusa" class="quote-art w-full py-3 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 text-xs tracking-wider uppercase transition-colors">Quero uma tattoo assim</button></div>
+          </article>
+          <article class="gallery-item autorais group relative bg-darkBg border border-gold/50 rounded-sm overflow-hidden shadow-lg">
+            <div class="h-80 overflow-hidden"><img src="fenix.jpeg" alt="Tatuagem de fênix e flores nas costas" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black via-black/90 to-transparent"><span class="text-[10px] text-gold uppercase tracking-widest">Projeto autoral</span><h3 class="font-cinzel text-lg text-white font-bold my-2">Fênix & floral</h3><button type="button" data-art="Projeto autoral — Fênix" class="quote-art w-full py-3 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 text-xs tracking-wider uppercase transition-colors">Quero uma tattoo assim</button></div>
+          </article>
+          <article class="gallery-item autorais group relative bg-darkBg border border-gold/50 rounded-sm overflow-hidden shadow-lg">
+            <div class="h-80 overflow-hidden"><img src="borboletas.jpeg" alt="Tatuagem de borboletas e flores na coluna" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black via-black/90 to-transparent"><span class="text-[10px] text-gold uppercase tracking-widest">Fine line / autoral</span><h3 class="font-cinzel text-lg text-white font-bold my-2">Borboletas & flores</h3><button type="button" data-art="Projeto autoral — Borboletas" class="quote-art w-full py-3 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 text-xs tracking-wider uppercase transition-colors">Quero uma tattoo assim</button></div>
+          </article>
+          <article class="gallery-item autorais group relative bg-darkBg border border-gold/50 rounded-sm overflow-hidden shadow-lg">
+            <div class="h-80 overflow-hidden"><img src="flores.jpeg" alt="Tatuagem delicada de flores com frase" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black via-black/90 to-transparent"><span class="text-[10px] text-gold uppercase tracking-widest">Fine line / escrita</span><h3 class="font-cinzel text-lg text-white font-bold my-2">Frase delicada & floral</h3><button type="button" data-art="Fine line — Frase floral" class="quote-art w-full py-3 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 text-xs tracking-wider uppercase transition-colors">Quero uma tattoo assim</button></div>
+          </article>
+          <article class="gallery-item realismo group relative bg-darkBg border border-gold/50 rounded-sm overflow-hidden shadow-lg">
+            <div class="h-80 overflow-hidden"><img src="india.jpeg" alt="Tatuagem realista de mulher indígena com adornos" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black via-black/90 to-transparent"><span class="text-[10px] text-gold uppercase tracking-widest">Realismo / sombreado</span><h3 class="font-cinzel text-lg text-white font-bold my-2">Índia com adornos</h3><button type="button" data-art="Realismo — Índia com adornos" class="quote-art w-full py-3 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 text-xs tracking-wider uppercase transition-colors">Quero uma tattoo assim</button></div>
+          </article>
+          <article class="gallery-item realismo group relative bg-darkBg border border-gold/50 rounded-sm overflow-hidden shadow-lg">
+            <div class="h-80 overflow-hidden"><img src="mascara.jpeg" alt="Tatuagem de máscara Hannya em estilo oriental" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black via-black/90 to-transparent"><span class="text-[10px] text-gold uppercase tracking-widest">Blackwork / oriental</span><h3 class="font-cinzel text-lg text-white font-bold my-2">Máscara oriental</h3><button type="button" data-art="Blackwork — Máscara oriental" class="quote-art w-full py-3 bg-gold/10 hover:bg-gold text-gold hover:text-black border border-gold/50 text-xs tracking-wider uppercase transition-colors">Quero uma tattoo assim</button></div>
+          </article>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="https://www.instagram.com/magotattooink01/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 border border-gold/50 text-gold hover:bg-gold hover:text-black px-7 py-4 text-xs uppercase tracking-[.16em] font-semibold transition-colors rounded-sm">
+            <i class="fa-brands fa-instagram text-lg" aria-hidden="true"></i> Veja mais trabalhos no Instagram
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- ================= BIOSSEGURANÇA ================= -->
-    <section id="biosseguranca" class="py-24 px-4 sm:px-6 max-w-7xl mx-auto border-t border-gold/10">
-        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span class="text-xs uppercase tracking-[0.3em] text-gold">Compromisso com Você</span>
-            <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white uppercase tracking-wider">
-                Biossegurança & Estrutura
-            </h2>
-            <div class="w-16 h-[1px] bg-gold mx-auto my-4"></div>
-            <p class="text-gray-400 text-sm font-light">
-                Sua saúde em primeiro lugar. Trabalhamos rigorosamente dentro de todas as normas sanitárias para garantir uma sessão 100% segura.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="p-8 bg-darkCard border border-gold/20 rounded-sm hover:border-gold/60 transition-colors text-center group">
-                <div class="w-16 h-16 rounded-full bg-gold/10 border border-gold/40 flex items-center justify-center mx-auto mb-6 text-gold text-2xl group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-pump-medical"></i>
-                </div>
-                <h3 class="font-cinzel text-xl font-bold text-white mb-3">Materiais Descartáveis</h3>
-                <p class="text-gray-400 text-sm font-light leading-relaxed">
-                    Agulhas, biqueiras, protetores e luvas são abertos na sua frente e descartados ao final da sessão.
-                </p>
-            </div>
-
-            <div class="p-8 bg-darkCard border border-gold/20 rounded-sm hover:border-gold/60 transition-colors text-center group">
-                <div class="w-16 h-16 rounded-full bg-gold/10 border border-gold/40 flex items-center justify-center mx-auto mb-6 text-gold text-2xl group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-vial-circle-check"></i>
-                </div>
-                <h3 class="font-cinzel text-xl font-bold text-white mb-3">Tintas Aprovadas Anvisa</h3>
-                <p class="text-gray-400 text-sm font-light leading-relaxed">
-                    Pigmentos de alta performance devidamente registrados e fiscalizados pela vigilância sanitária.
-                </p>
-            </div>
-
-            <div class="p-8 bg-darkCard border border-gold/20 rounded-sm hover:border-gold/60 transition-colors text-center group">
-                <div class="w-16 h-16 rounded-full bg-gold/10 border border-gold/40 flex items-center justify-center mx-auto mb-6 text-gold text-2xl group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-sparkles"></i>
-                </div>
-                <h3 class="font-cinzel text-xl font-bold text-white mb-3">Ambiente Esterilizado</h3>
-                <p class="text-gray-400 text-sm font-light leading-relaxed">
-                    Estúdio climatizado, higienizado com bactericidas hospitalares para total conforto e privacidade.
-                </p>
-            </div>
-        </div>
+    <!-- Biossegurança -->
+    <section id="biosseguranca" class="py-24 px-4 sm:px-6 max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs uppercase tracking-[.3em] text-gold">Compromisso com você</span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white uppercase tracking-wider mt-3">Biossegurança & estrutura</h2>
+        <div class="gold-line"></div>
+        <p class="text-gray-400 text-sm font-light">Sua saúde e tranquilidade devem estar em primeiro lugar. Conheça os cuidados adotados durante o atendimento.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+        <article class="p-8 bg-darkCard border border-gold/20 hover:border-gold/60 text-center transition-colors">
+          <div class="w-16 h-16 rounded-full bg-gold/10 border border-gold/40 flex items-center justify-center mx-auto mb-6 text-gold text-2xl"><i class="fa-solid fa-pump-medical" aria-hidden="true"></i></div>
+          <h3 class="font-cinzel text-lg font-bold text-white mb-3">Materiais descartáveis</h3>
+          <p class="text-gray-400 text-sm font-light leading-relaxed">Materiais de uso individual e descartáveis, com abertura e descarte adequados durante o atendimento.</p>
+        </article>
+        <article class="p-8 bg-darkCard border border-gold/20 hover:border-gold/60 text-center transition-colors">
+          <div class="w-16 h-16 rounded-full bg-gold/10 border border-gold/40 flex items-center justify-center mx-auto mb-6 text-gold text-2xl"><i class="fa-solid fa-vial-circle-check" aria-hidden="true"></i></div>
+          <h3 class="font-cinzel text-lg font-bold text-white mb-3">Tintas regulamentadas</h3>
+          <p class="text-gray-400 text-sm font-light leading-relaxed">Atenção à procedência dos pigmentos e à utilização de produtos regularizados para tatuagem.</p>
+        </article>
+        <article class="p-8 bg-darkCard border border-gold/20 hover:border-gold/60 text-center transition-colors">
+          <div class="w-16 h-16 rounded-full bg-gold/10 border border-gold/40 flex items-center justify-center mx-auto mb-6 text-gold text-2xl"><i class="fa-solid fa-hands-bubbles" aria-hidden="true"></i></div>
+          <h3 class="font-cinzel text-lg font-bold text-white mb-3">Higienização</h3>
+          <p class="text-gray-400 text-sm font-light leading-relaxed">Organização e higienização do espaço e das superfícies antes e após cada atendimento.</p>
+        </article>
+      </div>
     </section>
 
-    <!-- ================= AGENDAMENTO ================= -->
-    <section id="agendamento" class="py-24 px-4 sm:px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            <div class="lg:col-span-5 space-y-6">
-                <span class="text-xs uppercase tracking-[0.3em] text-gold">Agende Sua Sessão</span>
-                <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white uppercase tracking-wider">
-                    Solicite um Orçamento Rápido
-                </h2>
-                <p class="text-gray-400 text-sm font-light leading-relaxed">
-                    Preencha os campos para enviar as informações diretamente ao WhatsApp do tatuador Filipe Feitosa.
-                </p>
-
-                <div class="space-y-4 pt-4 border-t border-gold/10">
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold shrink-0">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs uppercase text-gray-400 block tracking-wider">Localização</span>
-                            <span class="text-sm font-medium text-white">São Luís - Maranhão</span>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold shrink-0">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs uppercase text-gray-400 block tracking-wider">WhatsApp</span>
-                            <span class="text-sm font-medium text-white">(98) 99999-9999</span>
-                        </div>
-                    </div>
-                </div>
+    <!-- Orçamento -->
+    <section id="agendamento" class="py-24 px-4 sm:px-6 max-w-7xl mx-auto border-t border-gold/10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs uppercase tracking-[.3em] text-gold">Vamos tirar sua ideia do papel?</span>
+          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white uppercase tracking-wider">Solicite seu orçamento</h2>
+          <p class="text-gray-400 text-sm font-light leading-relaxed">Conte um pouco sobre a tatuagem que deseja. Ao enviar, o WhatsApp será aberto com as informações preenchidas para você encaminhar ao tatuador.</p>
+          <div class="space-y-5 pt-5 border-t border-gold/10">
+            <div class="flex items-center gap-4">
+              <div class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-gold"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+              <div><span class="text-[10px] uppercase text-gray-500 block tracking-wider">Localização</span><span class="text-sm font-medium text-white">São Luís — Maranhão</span></div>
             </div>
-
-            <div class="lg:col-span-7 bg-darkCard border border-gold/30 p-6 sm:p-8 rounded-sm shadow-2xl relative">
-                <form id="calcForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-gold mb-2 font-medium">Seu Nome</label>
-                        <input type="text" id="clientName" required placeholder="Digite seu nome completo" class="w-full bg-darkBg border border-gold/20 focus:border-gold rounded-xs px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors">
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs uppercase tracking-wider text-gold mb-2 font-medium">Estilo Desejado</label>
-                            <select id="tattooStyle" class="w-full bg-darkBg border border-gold/20 focus:border-gold rounded-xs px-4 py-3 text-sm text-white focus:outline-none transition-colors">
-                                <option value="Realismo">Realismo / Sombreado</option>
-                                <option value="Projeto Autoral">Projeto Autoral Exclusivo</option>
-                                <option value="Blackwork">Blackwork / Oriental</option>
-                                <option value="Outro">Outro Estilo</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-xs uppercase tracking-wider text-gold mb-2 font-medium">Local do Corpo</label>
-                            <input type="text" id="bodyLocation" required placeholder="Ex: Costas, Antebraço, Perna..." class="w-full bg-darkBg border border-gold/20 focus:border-gold rounded-xs px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-gold mb-2 font-medium">Tamanho Aprox. (em cm)</label>
-                        <input type="text" id="tattooSize" placeholder="Ex: 15 cm x 10 cm" class="w-full bg-darkBg border border-gold/20 focus:border-gold rounded-xs px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-gold mb-2 font-medium">Detalhes da Ideia</label>
-                        <textarea id="tattooIdea" rows="3" placeholder="Descreva brevemente sua ideia..." class="w-full bg-darkBg border border-gold/20 focus:border-gold rounded-xs px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full py-4 bg-gold-gradient text-black font-bold text-xs sm:text-sm tracking-[0.2em] uppercase rounded-sm shadow-md btn-floating-effect flex items-center justify-center gap-3">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                        <span>Enviar Ideia pelo WhatsApp</span>
-                    </button>
-                </form>
+            <div class="flex items-center gap-4">
+              <div class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-gold"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></div>
+              <div><span class="text-[10px] uppercase text-gray-500 block tracking-wider">WhatsApp</span><a href="https://wa.me/5598987558077" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-white hover:text-gold transition-colors">(98) 98755-8077</a></div>
             </div>
+            <div class="flex items-center gap-4">
+              <div class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-gold"><i class="fa-brands fa-instagram" aria-hidden="true"></i></div>
+              <div><span class="text-[10px] uppercase text-gray-500 block tracking-wider">Instagram</span><a href="https://www.instagram.com/magotattooink01/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-white hover:text-gold transition-colors">@magotattooink01</a></div>
+            </div>
+          </div>
         </div>
+
+        <div class="lg:col-span-7 bg-darkCard border border-gold/30 p-6 sm:p-8 rounded-sm shadow-2xl">
+          <form id="quote-form" class="space-y-5">
+            <div>
+              <label for="client-name" class="block text-xs uppercase tracking-wider text-gold mb-2 font-medium">Seu nome *</label>
+              <input id="client-name" name="nome" type="text" autocomplete="name" required maxlength="100" placeholder="Digite seu nome"
+                     class="w-full bg-darkBg border border-gold/20 focus:border-gold rounded-sm px-4 py-3 text-sm text-white placeholder-gray-600">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="tattoo-style" class="block text-xs uppercase tracking-wider text-gold mb-2 font-medium">Estilo desejado</label>
+                <select id="tattoo-style" name="estilo" class="w-full bg-darkBg border border-gold/20 focus:border-gold rounded-sm px-4 py-3 text-sm text-white">
+                  <option>Realismo / Sombreado</option>
+                  <option>Projeto autoral exclusivo</option>
+                  <option>Blackwork / Oriental</option>
+                  <option>Fine line</option>
+                  <option>Outro estilo</option>
+                </select>
+              </div>
+              <div>
+                <label for="body-location" class="block text-xs uppercase tracking-wider text-gold mb-2 font-medium">Local do corpo *</label>
+                <input id="body-location" name="local" type="text" required maxlength="100" placeholder="Ex.: antebraço, costas..."
+                       class="w-full bg-darkBg border border-gold/20 focus:border-gold rounded-sm px-4 py-3 text-sm text-white placeholder-gray-600">
+              </div>
+            </div>
+            <div>
+              <label for="tattoo-size" class="block text-xs uppercase tracking-wider text-gold mb-2 font-medium">Tamanho aproximado</label>
+              <input id="tattoo-size" name="tamanho" type="text" maxlength="80" placeholder="Ex.: 15 cm x 10 cm"
+                     class="w-full bg-darkBg border border-gold/20 focus:border-gold rounded-sm px-4 py-3 text-sm text-white placeholder-gray-600">
+            </div>
+            <div>
+              <label for="tattoo-idea" class="block text-xs uppercase tracking-wider text-gold mb-2 font-medium">Conte sobre sua ideia</label>
+              <textarea id="tattoo-idea" name="ideia" rows="4" maxlength="1000" placeholder="Descreva a arte, referências, detalhes ou significado..."
+                        class="w-full bg-darkBg border border-gold/20 focus:border-gold rounded-sm px-4 py-3 text-sm text-white placeholder-gray-600"></textarea>
+            </div>
+            <button type="submit" class="gold-button w-full py-4 font-bold text-xs sm:text-sm tracking-[.18em] uppercase rounded-sm flex items-center justify-center gap-3">
+              <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> Enviar ideia pelo WhatsApp
+            </button>
+            <p class="text-[11px] text-gray-500 text-center">O formulário não armazena seus dados. A mensagem será preparada no WhatsApp.</p>
+          </form>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <!-- ================= FOOTER ================= -->
-    <footer class="border-t border-gold/20 bg-black pt-16 pb-12 px-4 sm:px-6 relative overflow-hidden">
-        <div class="gold-streak-bottom-right"></div>
-        <div class="max-w-7xl mx-auto flex flex-col items-center text-center space-y-6 relative z-10">
-            <img src="logo_mago_tatto_transparente.png" alt="Mago Tatto Studio Footer Logo" class="h-16 w-auto object-contain filter drop-shadow-[0_0_10px_rgba(197,160,89,0.3)] mb-1" onerror="this.onerror=null; this.src='https://placehold.co/200x100/0A0A0A/C5A059?text=MAGO+TATTO'">
-            <p class="font-cinzel italic text-xs text-gray-400 tracking-widest">"ARTE NA PELE, ALMA NO PROCESSO."</p>
-            <div class="w-full h-[1px] bg-gold/10 my-4"></div>
-            <p class="text-[11px] text-gray-500 tracking-wider">&copy; 2026 Mago Tatto Studio. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+  <!-- Rodapé -->
+  <footer class="border-t border-gold/20 bg-black py-14 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto flex flex-col items-center text-center gap-5">
+      <img src="logo_mago_tatto_transparente.png" alt="Mago Tattoo Studio" class="h-16 w-auto object-contain"
+           onerror="this.onerror=null;this.src='https://placehold.co/200x100/0A0A0A/C5A059?text=MAGO+TATTOO'">
+      <p class="font-cinzel italic text-xs text-gray-400 tracking-widest">“ARTE NA PELE.”</p>
+      <div class="flex items-center gap-5 text-xl">
+        <a href="https://www.instagram.com/magotattooink01/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-gold hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/5598987558077" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-gold hover:text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+      <div class="w-full h-px bg-gold/10 my-2"></div>
+      <p class="text-[11px] text-gray-500 tracking-wider">© <span id="current-year">2026</span> Mago Tattoo Studio. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
-    <!-- Botão WhatsApp Flutuante -->
-    <a href="https://wa.me/5598999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida." target="_blank" aria-label="Atendimento WhatsApp" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110 gold-glow">
-        <i class="fa-brands fa-whatsapp text-2xl"></i>
-    </a>
+  <!-- Atalho flutuante do WhatsApp -->
+  <a href="https://wa.me/5598987558077?text=Ol%C3%A1!%20Vim%20pelo%20site%20Mago%20Tattoo%20Studio."
+     target="_blank" rel="noopener noreferrer" aria-label="Fale com o Mago Tattoo Studio pelo WhatsApp"
+     class="fixed bottom-5 right-5 z-40 w-14 h-14 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110 gold-glow">
+    <i class="fa-brands fa-whatsapp text-2xl" aria-hidden="true"></i>
+  </a>
 
-    <!-- ================= JAVASCRIPT ================= -->
-    <script>
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
+  <script>
+    // Menu mobile acessível
+    const menuButton = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+    function closeMobileMenu() {
+      mobileMenu.classList.add('hidden');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Abrir menu');
+      menuButton.innerHTML = '<i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>';
+    }
+
+    menuButton.addEventListener('click', () => {
+      const willOpen = mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuButton.setAttribute('aria-expanded', String(willOpen));
+      menuButton.setAttribute('aria-label', willOpen ? 'Fechar menu' : 'Abrir menu');
+      menuButton.innerHTML = willOpen
+        ? '<i class="fa-solid fa-xmark text-xl" aria-hidden="true"></i>'
+        : '<i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>';
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Filtro da galeria: estado e aparência dos botões ficam sincronizados.
+    const filterButtons = document.querySelectorAll('.gallery-tab');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.dataset.filter;
+
+        filterButtons.forEach(tab => {
+          const selected = tab === button;
+          tab.setAttribute('aria-pressed', String(selected));
+          tab.classList.toggle('text-gray-300', !selected);
+          tab.classList.toggle('border-gold/30', !selected);
         });
 
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+        galleryItems.forEach(item => {
+          item.hidden = category !== 'todos' && !item.classList.contains(category);
         });
+      });
+    });
 
-        function filterGallery(category, evt) {
-            const tabs = document.querySelectorAll('.gallery-tab');
-            const items = document.querySelectorAll('.gallery-item');
+    // Botões de orçamento vinculados a cada trabalho.
+    const whatsappNumber = '5598987558077';
 
-            tabs.forEach(tab => {
-                tab.classList.remove('active', 'bg-gold', 'text-black', 'font-semibold');
-                tab.classList.add('text-gray-300', 'border-gold/30');
-            });
+    document.querySelectorAll('.quote-art').forEach(button => {
+      button.addEventListener('click', () => {
+        const artName = button.dataset.art;
+        const message = `Olá! Gostaria de solicitar um orçamento baseado no trabalho do site: ${artName}.`;
+        const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank', 'noopener,noreferrer');
+      });
+    });
 
-            if (evt && evt.target) {
-                evt.target.classList.add('active', 'bg-gold', 'text-black', 'font-semibold');
-                evt.target.classList.remove('text-gray-300', 'border-gold/30');
-            }
+    // Envio do formulário: prepara a mensagem sem enviar dados a nenhum servidor.
+    document.getElementById('quote-form').addEventListener('submit', event => {
+      event.preventDefault();
 
-            items.forEach(item => {
-                if (category === 'todos' || item.classList.contains(category)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
+      const name = document.getElementById('client-name').value.trim();
+      const style = document.getElementById('tattoo-style').value;
+      const location = document.getElementById('body-location').value.trim();
+      const size = document.getElementById('tattoo-size').value.trim() || 'Não informado';
+      const idea = document.getElementById('tattoo-idea').value.trim() || 'Não informado';
 
-        function openQuotaModal(artTitle) {
-            const phoneNumber = "5598999999999";
-            const message = encodeURIComponent(`Olá! Gostaria de fazer um orçamento baseado na arte do site: *${artTitle}*.`);
-            window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
-        }
+      const message = [
+        '*ORÇAMENTO VIA SITE — MAGO TATTOO STUDIO*',
+        '',
+        `*Nome:* ${name}`,
+        `*Estilo:* ${style}`,
+        `*Local do corpo:* ${location}`,
+        `*Tamanho aproximado:* ${size}`,
+        `*Detalhes da ideia:* ${idea}`
+      ].join('\n');
 
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            const name = document.getElementById('clientName').value;
-            const style = document.getElementById('tattooStyle').value;
-            const location = document.getElementById('bodyLocation').value;
-            const size = document.getElementById('tattooSize').value || 'Não informado';
-            const idea = document.getElementById('tattooIdea').value || 'Ideia sem descrição adicional';
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
+    });
 
-            const text = `*ORÇAMENTO VIA SITE - MAGO TATTO STUDIO*\n\n` +
-                         `*Nome:* ${name}\n` +
-                         `*Estilo:* ${style}\n` +
-                         `*Local do Corpo:* ${location}\n` +
-                         `*Tamanho Aprox.:* ${size}\n` +
-                         `*Detalhes:* ${idea}`;
-
-            const phoneNumber = "5598999999999";
-            window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`, '_blank');
-        }
-    </script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
