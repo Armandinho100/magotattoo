@@ -34,6 +34,13 @@
   <style>
     :root { color-scheme: dark; }
     * { box-sizing: border-box; }
+    /* Evita que o título da seção fique escondido atrás do menu fixo ao clicar nos links */
+    section[id] { scroll-margin-top: 5rem; }
+    /* Foto do tatuador: P&B com cor no hover só onde existe hover (no celular fica colorida) */
+    @media (hover: hover) {
+      .artist-photo { filter: grayscale(1); transition: filter .7s; }
+      .artist-photo:hover { filter: grayscale(0); }
+    }
     body {
       background-color: #0a0a0a;
       background-image: radial-gradient(rgba(197,160,89,.07) 1px, transparent 1px);
@@ -77,7 +84,7 @@
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Navegação principal">
       <div class="h-20 flex items-center justify-between">
         <a href="#inicio" class="flex items-center" aria-label="Mago Tattoo Studio — início">
-          <img src="logo_mago_tatto_transparente.png" alt="Logo Mago Tattoo Studio" class="h-12 w-auto object-contain drop-shadow-[0_0_8px_rgba(197,160,89,.3)]"
+          <img src="logo_mago.png" alt="Logo Mago Tattoo Studio" width="720" height="748" class="h-16 w-auto object-contain drop-shadow-[0_0_8px_rgba(197,160,89,.3)]"
                onerror="this.onerror=null;this.src='https://placehold.co/200x100/0A0A0A/C5A059?text=MAGO+TATTOO'">
         </a>
 
@@ -140,8 +147,9 @@
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
           <span class="text-[10px] sm:text-xs tracking-[.22em] text-gold uppercase">Agenda aberta — consulte disponibilidade</span>
         </div>
-        <img src="logo_mago_tatto_transparente.png" alt="Mago Tattoo Studio"
-             class="w-full max-w-[270px] sm:max-w-[350px] md:max-w-[390px] h-auto object-contain mb-7 drop-shadow-[0_0_25px_rgba(197,160,89,.35)]"
+        <h1 class="sr-only">Mago Tattoo Studio — tatuador em São Luís, Maranhão</h1>
+        <img src="logo_mago.png" alt="Mago Tattoo Studio" width="720" height="748"
+             class="w-full max-w-[250px] sm:max-w-[300px] md:max-w-[340px] h-auto object-contain mb-7 drop-shadow-[0_0_25px_rgba(197,160,89,.35)]"
              onerror="this.onerror=null;this.src='https://placehold.co/400x300/0A0A0A/C5A059?text=MAGO+TATTOO+STUDIO'">
         <div class="flex items-center justify-center gap-3">
           <span class="text-gold">✦</span>
@@ -173,7 +181,7 @@
           <div class="relative z-10 border border-gold/40 bg-darkCard p-2 shadow-2xl">
             <div class="h-[390px] sm:h-[480px] lg:h-[510px] overflow-hidden">
               <img src="filipefeitosa.png" alt="Filipe Feitosa, tatuador do Mago Tattoo Studio"
-                   class="w-full h-full object-cover object-[center_20%] grayscale hover:grayscale-0 transition-all duration-700">
+                   loading="lazy" class="artist-photo w-full h-full object-cover object-[center_20%]">
             </div>
             <div class="absolute bottom-6 left-6 right-6 bg-black/90 border border-gold/30 p-4 text-center">
               <span class="text-xs uppercase tracking-[.25em] text-gold font-bold block">Filipe Feitosa</span>
@@ -417,7 +425,7 @@
   <!-- Rodapé -->
   <footer class="border-t border-gold/20 bg-black py-14 px-4 sm:px-6">
     <div class="max-w-7xl mx-auto flex flex-col items-center text-center gap-5">
-      <img src="logo_mago_tatto_transparente.png" alt="Mago Tattoo Studio" class="h-16 w-auto object-contain"
+      <img src="logo_mago.png" alt="Mago Tattoo Studio" width="720" height="748" loading="lazy" class="h-28 w-auto object-contain"
            onerror="this.onerror=null;this.src='https://placehold.co/200x100/0A0A0A/C5A059?text=MAGO+TATTOO'">
       <p class="font-cinzel italic text-xs text-gray-400 tracking-widest">“ARTE NA PELE.”</p>
       <div class="flex items-center gap-5 text-xl">
